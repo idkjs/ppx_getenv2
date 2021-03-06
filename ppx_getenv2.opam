@@ -1,0 +1,18 @@
+opam-version: "1.2"
+maintainer: "rudi.grinberg@gmail.com"
+authors: ["Rudi Grinberg"]
+homepage: "https://github.com/rgrinberg/ppx_getenv2"
+bug-reports: "https://github.com/rgrinberg/ppx_getenv2/issues"
+dev-repo: "git+https://github.com/rgrinberg/ppx_getenv2.git"
+license: "Apache-2.0"
+
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+]
+
+depends: [
+  "dune" {build}
+  "ppxlib"
+]
+available: [ ocaml-version >= "4.03.0" ]
